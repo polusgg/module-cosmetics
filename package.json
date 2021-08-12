@@ -1,6 +1,6 @@
 {
   "name": "@polusgg/plugin-template",
-  "np-plugin": true,
+  "np-plugin": false,
   "version": "1.0.0",
   "description": "Template repository for creating plugins with NodePolus",
   "scripts": {
@@ -17,6 +17,9 @@
     "url": "https://github.com/polusgg/plugin-template/issues"
   },
   "homepage": "https://github.com/polusgg/plugin-template",
+  "dependencies": {
+
+  },
   "devDependencies": {
     "@types/node": "^14.14.22",
     "@typescript-eslint/eslint-plugin": "^4.15.0",
@@ -24,8 +27,5 @@
     "eslint": "^7.19.0",
     "eslint-plugin-tsdoc": "^0.2.11",
     "typescript": "^4.1.3"
-  },
-  "dependencies": {
-    "@nodepolus/framework": "latest"
   }
 }
