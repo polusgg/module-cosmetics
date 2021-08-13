@@ -1,7 +1,7 @@
 {
   "name": "@polusgg/module-cosmetics",
   "np-plugin": false,
-  "version": "0.1.0",
+  "version": "0.1.1-0",
   "description": " Intermediate type package for the cosmetic server ",
   "scripts": {
     "lint": "eslint . --ext .ts",
