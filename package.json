@@ -5,7 +5,9 @@
   "description": " Intermediate type package for the cosmetic server ",
   "scripts": {
     "lint": "eslint . --ext .ts",
-    "lint-and-fix": "eslint . --ext .ts --fix"
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "build": "tsc -p .",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
