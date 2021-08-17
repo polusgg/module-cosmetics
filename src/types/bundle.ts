@@ -2,7 +2,6 @@ export type Bundle = {
   id: string;
   keyArtUrl: string;
   color: string;
-  author: string;
   name: string;
   items: string[];
   priceUsd: number;
@@ -16,7 +15,6 @@ export const partialBundleSchema = {
     id: { type: "string" },
     keyArtUrl: { type: "string" },
     color: { type: "string" },
-    author: { type: "string" },
     name: { type: "string" },
     priceUsd: { type: "number" },
     description: { type: "string" },
@@ -33,5 +31,5 @@ export const partialBundleSchema = {
 
 export const bundleSchema = {
   ...partialBundleSchema,
-  required: ["keyArtUrl", "color", "name", "priceUsd", "description", "forSale", "items", "author"],
+  required: ["keyArtUrl", "color", "name", "priceUsd", "description", "forSale", "items"],
 };
