@@ -18,6 +18,8 @@ export type Item = {
     type: "SKIN";
   } | {
     type: "MODEL";
+  } | {
+    type: "PERK";
   }
 );
 

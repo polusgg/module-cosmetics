@@ -7,6 +7,7 @@ export type Bundle = {
   priceUsd: number;
   description: string;
   forSale: boolean;
+  recurring: boolean;
 };
 
 export const partialBundleSchema = {
@@ -19,6 +20,7 @@ export const partialBundleSchema = {
     priceUsd: { type: "number" },
     description: { type: "string" },
     forSale: { type: "boolean" },
+    recurring: { type: "boolean" },
     items: {
       type: "array",
       minItems: 1,
@@ -31,5 +33,5 @@ export const partialBundleSchema = {
 
 export const bundleSchema = {
   ...partialBundleSchema,
-  required: ["keyArtUrl", "color", "name", "priceUsd", "description", "forSale", "items"],
+  required: ["keyArtUrl", "color", "name", "priceUsd", "description", "forSale", "items", "recurring"],
 };

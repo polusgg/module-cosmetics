@@ -6,10 +6,12 @@ export type Purchase = {
   timeCreated: number;
   timeFinalized: number;
   finalized: boolean;
+  recurring: boolean;
   vendorData: {
     name: "STEAM";
     orderId: string;
     userId: number;
+    transactionId: string;
   } | {
     name: "PLAY_STORE";
     transactionId: string;
@@ -29,6 +31,7 @@ export const partialPurchaseSchema = {
     timeCreated: { type: "number" },
     timeFinalized: { type: "number" },
     finalized: { type: "boolean" },
+    recurring: { type: "boolean" },
     vendorData: {
       type: "object",
       oneOf: [
@@ -60,5 +63,5 @@ export const partialPurchaseSchema = {
 
 export const purchaseSchema = {
   ...partialPurchaseSchema,
-  required: ["id", "cost", "purchaser", "time", "vendorData"],
+  required: ["id", "cost", "purchaser", "time", "vendorData", "recurring"],
 };
