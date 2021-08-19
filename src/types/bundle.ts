@@ -1,5 +1,6 @@
 export type Bundle = {
   id: string;
+  numberId: number;
   keyArtUrl: string;
   color: string;
   name: string;
