@@ -9,12 +9,19 @@ export type Bundle = {
   description: string;
   forSale: boolean;
   recurring: boolean;
-};
+} & (
+  {
+    type: "COSMETIC",
+  } | {
+    type: "PERK"
+  }
+);
 
 export const partialBundleSchema = {
   type: "object",
   properties: {
     id: { type: "string" },
+    type: { type: "string" },
     keyArtUrl: { type: "string" },
     color: { type: "string" },
     name: { type: "string" },
@@ -34,5 +41,5 @@ export const partialBundleSchema = {
 
 export const bundleSchema = {
   ...partialBundleSchema,
-  required: ["keyArtUrl", "color", "name", "priceUsd", "description", "forSale", "items", "recurring"],
+  required: ["type", "keyArtUrl", "color", "name", "priceUsd", "description", "forSale", "items", "recurring"],
 };

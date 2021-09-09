@@ -19,6 +19,7 @@ export type Item = {
   } | {
     type: "MODEL";
   } | {
+    // todo: deprecate this garbage asap
     type: "PERK";
   }
 );
