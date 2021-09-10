@@ -7,6 +7,7 @@ export type Purchase = {
   timeFinalized: number;
   finalized: boolean;
   recurring: boolean;
+  assignedDiscordRole?: string;
   vendorData: {
     name: "STEAM";
     orderId: string;

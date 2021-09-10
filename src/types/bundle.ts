@@ -9,6 +9,7 @@ export type Bundle = {
   description: string;
   forSale: boolean;
   recurring: boolean;
+  assignsDiscordRole?: string;
 } & (
   {
     type: "COSMETIC",
